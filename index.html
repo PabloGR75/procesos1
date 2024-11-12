@@ -18,32 +18,75 @@
 <meta property="og:url" content="https://www.pablerasculoperas.com" />
 <meta property="og:image" content="hhttps://www.pablerasculoperas.com/imagenes/bono.jpg" />
 
+<link rel="stylesheet" href="estilos/normalize.css" />
+<link rel="stylesheet" href="estilos/index.css" />
+
 <title>Portfolio PGR</title>
 
-<style>
-body {
-    background: rgba(208,208,208,0.9);
-}
-</style>
 </head>
 
 <body>
 
     <header style="margin-bottom: 20px;">
-        <nav>
-        <a href="#experiencia">Experiencia</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="https://twitch.tv/midudev" target="_blank" rel="noreferrer">Twitch</a>
-        </nav>
+
+        <dialog id="modal">
+            <h1>Se puede abrir un modal</h1>
+            <p>Es totalmente nativo</p>
+            <button id="cerrar">Cerrar</button>
+        </dialog>
+
+        <div class="flex-space navBar">
+            <nav class="navBar__nav">
+                <a class="navBar__nav-a" href="#experiencia">Experiencia</a>
+                <a class="navBar__nav-a" href="#proyectos">Proyectos</a>
+                <a class="navBar__nav-a" href="https://twitch.tv/midudev" target="_blank" rel="noreferrer">Twitch</a>
+            </nav>
+            <button id="show" class="navBar__button">Más información</button>
+        </div>
+
     </header>
 
     <main>
 
-        <video src="imagenes/sample_960x400_ocean_with_audio.mp4" controls></video>
+        <h1 class="title">Portfolio Pablo García</h1>
 
-        <h1>Portfolio Pablo García</h1>
+        <section class="presentacion flex-center">
+        
+            <img class="presentacion__image-profile" title="Stay (faraway, so close!)" src="imagenes/bono.jpg" alt="Bono en Stay" width="230rem">
 
-        <p><strong>Ingeniero de Software</strong> con tropecientos años de experiencia</p>
+            <p class="presentacion__description"><strong>Ingeniero de Software</strong> con tropecientos años de experiencia</p>
+        
+        </section>
+
+        <video width="420px" src="imagenes/sample_960x400_ocean_with_audio.mp4" controls></video>
+        
+        <section>
+            <article class="articulo articulo--activo">
+                <header class="articulo_header">
+                    <h4 class="articulo__header-h4">Sitio web corporativo</h4>
+                </header>
+                <body>
+                    <p>Aquí mis movidas</p>
+                </body>
+                <footer>
+                    <small>Tecnologías utilizadas: HTML, CSS, JavaScript</small>
+                </footer>
+            </article>
+        </section>
+
+        <section>
+            <article class="articulo articulo--activo">
+                <header class="articulo_header">
+                    <h4 class="articulo__header-h4">Sitio web corporativo 2</h4>
+                </header>
+                <body>
+                    <p>Aquí mis movidas</p>
+                </body>
+                <footer>
+                    <small>Tecnologías utilizadas: HTML, CSS, JavaScript</small>
+                </footer>
+            </article>
+        </section>
 
         <h2 id="experiencia">Experiencia</h2>
 
@@ -53,7 +96,6 @@ body {
             <li class="">MiTek Inc.</li>
         </ol>
 
-        <img title="Stay (faraway, so close!)" src="imagenes/bono.jpg" alt="Bono en Stay" width="300px">
 
         <hr>
 
@@ -148,15 +190,6 @@ body {
 
         <iframe style="width:100%; aspect-ratio:16/9" src="https://www.youtube.com/embed/ujNeHIo7oTE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-        <hr>
-
-        <dialog id="modal">
-            <h1>Se puede abrir un modal</h1>
-            <p>Es totalmente nativo</p>
-            <button id="cerrar">Cerrar</button>
-        </dialog>
-        <button id="show">Ver más información</button>
-
     </main>
 
     <script>
@@ -167,5 +200,6 @@ body {
             window.modal.close()
         })
     </script>
+
 </body>
 </html>
