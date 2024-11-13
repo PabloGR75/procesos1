@@ -6,12 +6,19 @@
 body {
   /* background: rgba(208,208,208,0.9); */
   max-width: 1440px;
-  min-width: 1024px;
+  min-width: 425px;
+  font-family: "Roboto",Helvetica,Arial,sans-serif;
 }
 
 .title{
   font-size: 3.5rem;
-  padding: 0rem 0rem 0rem 5rem;
+  padding: 0rem 0rem 0rem 0rem;
+}
+
+.video_limit{
+  border-top: solid 2px sienna;
+  border-bottom: solid 2px sienna;
+  padding: 10px 0;
 }
 
 .flex-space{
@@ -25,28 +32,11 @@ body {
   align-items: center;
 }
 
-/* ------------ articulo ------------ */
-
-.articulo{
-  padding: 1rem;
-  background-color: white;
-  margin-top: 1rem;
-}
-
-.articulo:hover{
-  background-color: rgb(221, 205, 205);
-}
-
-.articulo--active{
-  background-color: rgb(221, 205, 205);
-}
-
-.articulo__header-h4{
-  font-size: 1.5rem;
-  color: #b30033;
-}
-
 /* ------------ navBar ------------ */
+
+.head_background{
+  background-color: lightsalmon;
+}
 
 .navBar{
   margin-bottom: 2.5rem;
@@ -65,20 +55,35 @@ body {
   color: white;
   text-decoration: none;
 }
+.navBar__nav-a:hover{
+  color: lightgray;
+  text-decoration: none;
+}
 
 .navBar__button{
   background-color: var(--color-primary);
   color: white;
   border-radius: 40px;
   border: transparent;
+  cursor: pointer;
+  padding: 0 15px;
+}
+.navBar__button:hover{
+  background-color: var(--color-secondary);
 }
 
+@media screen and (max-width:680px){
+  .navBar__nav{
+    margin-right: 10px;
+  }
+}
 @media screen and (max-width:425px){
   .navBar{
     width: 424px;
   }
   .navBar__nav{
     width: 50%;
+    margin-right: 10px;
   }
   .navBar__button{
     width: 40%;
@@ -102,4 +107,35 @@ body {
   width: 30rem;
   padding: 0.5rem;
   color: var(--color-primary);
+}
+
+/* ------------ articulo ------------ */
+
+.articulo{
+  padding: 1rem;
+  background-color: white;
+  margin-top: 1rem;
+}
+
+.articulo:hover{
+  background-color: rgb(221, 205, 205);
+}
+
+.articulo--active{
+  background-color: rgb(221, 205, 205);
+}
+
+.articulo__header-h4{
+  font-size: 1.5rem;
+  color: #b30033;
+}
+
+/* ------------ otros ------------ */
+
+.p-1{
+  padding: 1rem;
+}
+
+.mb-20{
+  margin-bottom: 20px;
 }
